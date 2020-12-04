@@ -1,0 +1,9 @@
+{% extends 'tunr/base.html' %} {% block content %}
+<h2>{{ song.title }} <a href="{% url 'song_edit' pk=song.pk %}">(edit)</a></h2>
+<h3>By: {{ song.artist.name }}</h3>
+
+Album: {{ song.album }}
+<div>
+    <a href="{% url 'song_delete' pk=song.pk %}">DELETE</a>
+  </div>
+{% endblock %}

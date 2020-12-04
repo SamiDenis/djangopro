@@ -1,0 +1,5 @@
+<h1>Delete {{song.title}} by {{song.artist.name}}</h1>
+<form method="POST" action="{% url 'song_delete' pk=song.pk %}">
+{% csrf_token %}
+    <input type="submit" value="Confirm Delete">
+</form>
